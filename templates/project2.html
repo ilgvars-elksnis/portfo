@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Data analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="./static/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="./static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Home</a>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Data analysis with jupyter notebook</h1>
+							<p>In this segment we will try out jupyter notebook. We have 2 small projects here. One on pandas and scikit-learn</p>
+							<h3>Pandas</h3>
+							<p>Let's start with pandas which is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language. </p>
+							<span class="image fit"><img src="./static/images/02-1.png" alt="" /></span>
+							<p> First we import pandas as pd and import csv database we will use</p>
+							<span class="image fit"><img src="./static/images/02-2.png" alt="" /></span>
+							<p>We can use describe and values methods to have more indepth look at the database</p>
+							<span class="image fit"><img src="./static/images/02-3.png" alt="" /></span>
+							<p>Then we create new database with values we want</p>
+							<span class="image fit"><img src="./static/images/02-4.png" alt="" /></span>
+							<p>We import seaport graph library to display data. As we can see our dataset is too massive to get any reasonable reading so we will split some data off and analyse it seperatly</p>
+							<span class="image fit"><img src="./static/images/02-5.png" alt="" /></span>
+							<p>Let's pick New York county and pick data only with 500+ cases</p>
+							<span class="image fit"><img src="./static/images/02-6.png" alt="" /></span>
+							<p>Since we are using covid-19 data we will make graph where we can see as cases in county increases the deathrate goes up</p>
+							<h3>Analysis with scikit-learn</h3>
+							<p>Simple and efficient tools kit for predictive data analysis. Accessible to everybody, and reusable in various contexts. Built on NumPy, SciPy, and matplotlib </p>
+							<p>In this project we will use prebuilt library form scikit-learn. Library is of iris flower and it's parameters</p>
+							<span class="image fit"><img src="./static/images/02-01.png" alt="" /></span>
+							<p>First we import iris dataset. Then we pick out parameters we will use in testing</p>
+							<span class="image fit"><img src="./static/images/02-02.png" alt="" /></span>
+							<p>Next we make our testin model. We use K-Neighbor algorithm. Then we create our own flower and see how our model reacts. It seems out data could be one of the 2 types</p>
+							<span class="image fit"><img src="./static/images/02-03.png" alt="" /></span>
+							<p>Next we check out the dataset itself. Her we check the sepal data in the dataset and display it in the graph</p>
+							<span class="image fit"><img src="./static/images/02-04.png" alt="" /></span>
+							<p>Next we check out other feature which is used to identify flower. This time we look at petal data and display it too on a graph</p>
+							<ul class="actions">
+								<li><a href="https://github.com/ilgvars-elksnis/data" class="button">GitHub</a></li>
+							</ul>
+
+						</div>
+					</section>
+
+			</div>
+
+		
+
+		<!-- Scripts -->
+			<script src="./static/assets/js/jquery.min.js"></script>
+			<script src="./static/assets/js/jquery.scrollex.min.js"></script>
+			<script src="./static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="./static/assets/js/browser.min.js"></script>
+			<script src="./static/assets/js/breakpoints.min.js"></script>
+			<script src="./static/assets/js/util.js"></script>
+			<script src="./static/assets/js/main.js"></script>
+
+	</body>
+</html>
