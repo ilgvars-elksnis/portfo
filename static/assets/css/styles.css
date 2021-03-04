@@ -1,0 +1,723 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap');
+
+/*Body*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+    scroll-behavior: smooth;
+}
+ 
+section {
+    padding: 100px;
+}
+
+/*Front page*/
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+    background: url(/static/images/background.png);
+    background-repeat: no-repeat;
+    background-position: 0% 0%;
+    background-size: 100% 100%;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner h2 {
+    font-size: 3em;
+    color: rgb(206, 96, 23);
+    font-weight: 700;
+    line-height: 1.5em;
+    z-index: 1;
+}
+
+
+.banner h2 span {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner h3 {
+    font-size: 2em;
+    color: rgb(206, 96, 23);
+    font-weight: 700;
+}
+
+/*Button*/
+
+.btn {
+    position: relative;
+    background: blueviolet;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 23px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: rgb(1, 247, 255);
+    color: rgb(0, 0, 0)
+}
+
+/* Navbar */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky {
+    background: rgb(82, 81, 81);
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    color: rgb(206, 96, 23);
+    font-size: 26px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+
+header.sticky .logo {
+    color: rgb(1, 247, 255);
+}
+
+header ul {
+    padding-right: 100px;
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    position: relative;
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: rgb(206, 96, 23);
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 800;
+}
+
+header.sticky ul li a {
+    color: rgb(1, 247, 255);
+}
+
+/* Heading for other pages*/
+
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.heading h2 {
+    padding-bottom: 30px;
+    color: rgb(1, 247, 255);
+    font-size: 3em;
+    font-weight: 700;
+}
+
+/* About section */
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(75, 75, 75));
+    background-attachment: fixed;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .container .card {
+    position: relative;
+    width: 260px;
+    height: 450px;
+    background: rgb(32, 0, 53);
+    margin: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1);
+    transition: 0.5s;
+}
+
+.about .container:hover .card {
+    filter: blur(10px);
+    transform: scale(0.8);
+    opacity: 0.5;
+}
+
+.about .container .card:hover {
+    filter: blur(0px);
+    transform: scale(1.2);
+    opacity: 1;
+    background: rgb(0, 0, 0);
+}
+
+.about .container .card .circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    clip-path: circle(160px at center 0);
+    text-align: center;
+}
+
+.about .container .card .circle h2 {
+    color: rgb(206, 96, 23);
+    font-size: 3em;
+    padding: 30px 0;
+}
+.about .container .card:hover .circle h2 {
+    color: rgb(1, 247, 255);
+}
+
+.about .container .card .content {
+    position: absolute;
+    top: 200px;
+    text-align: center;
+    padding: 10px 10px;
+
+}
+
+.about .container .card .content p {
+    color: rgb(206, 96, 23);
+    font-size: 20px;
+    font-weight: 700;
+    opacity: 1;
+}
+
+.about .container .card:hover .content p{
+    color: rgb(1, 247, 255);
+}
+
+.about .container .card:nth-child(1) .circle {
+    background: rgb(192, 192, 192);
+}
+
+.about .container .card:nth-child(2) .circle {
+    background: rgb(158, 158, 158);
+}
+
+.about .container .card:nth-child(3) .circle {
+    background: rgb(73, 73, 73);
+}
+
+/* Project section */
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(75, 75, 75), rgb(0, 0, 0));
+    min-height: 100vh;
+}
+
+.projects .container .card {
+    position: relative;
+    width: 300px;
+    height: 550px;
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.projects .container .card:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    pointer-events: none;
+}
+
+.projects .container .card .content {
+    padding: 30px;
+    text-align: center;
+}
+
+.projects .container .card .content h2 {
+    position: relative;
+    font-size: 2em;
+    color: rgb(43, 255, 1);
+    z-index: 2;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    padding: 0 20px;
+}
+
+.projects .container .card:hover .content h2 {
+    color: rgb(1, 247, 255);
+    translate: 0 -20px;
+}
+
+.projects .container .card .content p {
+    position: relative;
+    font-size: 20px;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+.projects .container .card:hover .content p {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
+
+.projects .container span {
+    transition: 0.5s;
+}
+
+.projects .container span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(to right, transparent, rgb(255, 0, 0));
+    animation: animate1 2s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translate(-100%);
+    }
+
+    100% {
+        transform: translate(100%);
+    }
+}
+
+.projects .container span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background-image: linear-gradient(to right, transparent, rgb(255, 0, 0));
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.projects .container span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-image: linear-gradient(to left, transparent, rgb(255, 0, 0));
+    animation: animate3 2s linear infinite;
+}
+
+@keyframes animate3 {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.projects .container span:nth-child(4) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background-image: linear-gradient(to top, transparent, rgb(255, 0, 0));
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
+}
+
+@keyframes animate4 {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+/* Contact section */
+
+.contact {
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(75, 75, 75));
+}
+
+.contact .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.formBox {
+    min-width: 60%;
+}
+
+.formBox form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formBox form h3,
+.contactInfo h3 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.formBox form input,
+.formBox form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: rgb(75, 75, 75);
+    color: rgb(255, 255, 255);
+    resize: none;
+}
+
+.formBox form textarea {
+    min-height: 200px;
+}
+
+.formBox form input::placeholder,
+.formBox form textarea::placeholder{
+    color: rgb(1, 247, 255);
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.formBox form input[type="submit"]{
+    max-width: 100px;
+    background: blueviolet;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.formBox form input[type="submit"]:hover {
+    background: rgb(1, 247, 255);
+    color: rgb(0, 0, 0)
+}
+
+.contactInfo {
+    min-width: 40%;
+}
+
+.contactInfoBox {
+    position: relative;
+}
+
+.contactInfoBox .box     {
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.contactInfoBox .box .text {
+    display:flex;
+    margin-left: 20px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    flex-direction: column;
+    font-weight: 500;
+}
+
+.contactInfoBox .box .icon a {
+    display: flex;
+    min-width: 40%;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+.contactInfoBox .box .icon:hover a{
+    color: rgb(1, 247, 255);
+}
+
+.contactInfoBox .box .text h3 {
+    color: rgb(1, 247, 255);
+    font-size: 20px;
+}
+
+b {
+    padding: 50px;
+    position: absolute;
+    pointer-events: none;
+    background: rgb(255, 255, 255);
+    animation: squares 3s linear infinite;
+    z-index: -10;
+}
+
+/* Squares animation*/
+
+@keyframes squares {
+    0% {
+        transform: scale(0) translate(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    90% {
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: scale(0.1) translateY(700%) rotate(4000deg);
+        opacity: 0;
+    }
+}
+
+/* Responce animation*/
+
+.responce {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(75, 75, 75));
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.responce h2 {
+    font-size: 6em;
+    color: rgb(1, 247, 255);
+    z-index: 10;
+}
+
+.responce .pics {
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+}
+
+.responce .pics div {
+    position: absolute;
+    display: block;
+}
+
+.responce .pics div:nth-child(1) {
+    left: -50%;
+    animation: stuff 25s linear infinite;
+    animation-delay: -5s;
+}
+
+.responce .pics div:nth-child(2) {
+    left: -15%;
+    animation: stuff 17s linear infinite;
+    animation-delay: -3s;
+}
+
+.responce .pics div:nth-child(3) {
+    left: 25%;
+    animation: stuff 12s linear infinite;
+    animation-delay: -2s;
+}
+
+.responce .pics div:nth-child(4) {
+    left: 50%;
+    animation: stuff 20s linear infinite;
+    animation-delay: 0s;
+}
+
+.responce .pics div:nth-child(5) {
+    left: 70%;
+    animation: stuff 10s linear infinite;
+    animation-delay: -4s;
+}
+
+.responce .pics div:nth-child(6) {
+    left: 90%;
+    animation: stuff 15s linear infinite;
+    animation-delay: -8s;
+}
+
+.responce .pics div:nth-child(7) {
+    left: 110%;
+    animation: stuff 11s linear infinite;
+    animation-delay: -1s;
+}
+
+@keyframes stuff {
+    0% {
+        opacity: 0;
+        top: -50%;
+        transform: translateX(20px) rotate(0deg);
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        transform: translateX(-20px) rotate(45deg);
+    }
+    40% {
+        transform: translateX(20px) rotate(90deg);
+    }
+    60% {
+        transform: translateX(-20px) rotate(135deg);
+    }
+    80% {
+        transform: translateX(20px) rotate(180deg);
+    }
+    100% {
+        top: 150%;
+        transform: translateX(-20px) rotate(225deg);
+    }
+}
+
+/* Responsive mode*/
+
+@media (max-width: 991px) {
+    header,
+    header.sticky {
+        padding: 10px 30px;
+        z-index: 10;
+    }
+
+    .menu {
+        position: fixed;
+        top: 69px;
+        left: -100%;
+        display: block;
+        padding: 80px 40px;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        background: rgb(63, 10, 70);
+        transition: 0.5s;
+        z-index: 3;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .menu.active {
+        left: 0;
+    }
+
+    header ul li a {
+        color: rgb(206, 96, 23);
+        font-size: 2em;
+        margin: 15px;
+    }
+
+    .toggle {
+        width: 50px;
+        height: 50px;
+        background: url(/static/images/toggle.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50px;
+        filter: invert(100%);
+    }
+
+    .toggle.active {
+        width: 50px;
+        height: 50px;
+        background: url(/static/images/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50px;
+        filter: invert(100%);
+    }
+
+    section {
+        padding: 50px 30px;
+    }
+
+    .heading h2 {
+        font-size: 2em;
+    }
+
+    .banner {
+        padding: 60px 30px 150px;
+    }
+
+    .banner h2 {
+        font-size: 2em; 
+    }
+
+    .banner h3 {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .formBox {
+        min-width: 90%;
+    }
+}

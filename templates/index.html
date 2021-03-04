@@ -1,149 +1,154 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-	<head>
-		<title>Home</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="./static/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="./static/assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Projects</a></li>
-							<li><a href="#two">Contact</a></li>
-						</ul>
-					</nav>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+	<link href="{{ url_for('static', filename='assets/css/styles.css') }}" rel="stylesheet" />
+
+</head>
+
+<body>
+	<header>
+		<a href="#banner" class="logo">Portfolio</a>
+		<div class="toggle" onclick="toggleMenu();"></div>
+		<ul class="menu">
+			<li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+			<li><a href="#about" onclick="toggleMenu();">About me</a></li>
+			<li><a href="#projects" onclick="toggleMenu();">Projects</a></li>
+			<li><a href="#contact" onclick="toggleMenu();">Contact me</a></li>
+		</ul>
+	</header>
+	<section class="banner" id="banner">
+		<div class="textBox">
+			<h2>Greetings, I am <br><span>Ilgvars Elksnis</span></h2>
+			<h3>Studying to become Full-Stack Developer</h3>
+			<a href="#about" class="btn">About me</a>
+		</div>
+	</section>
+
+
+	<section class="about" id="about">
+		<div class="heading">
+			<h2>About Me</h2>
+			<div class="container">
+				<div class="card">
+					<div class="circle">
+						<h2>Skills</h2>
+					</div>
+					<div class="content">
+						<p>My primary skills are basics in python, javascript, html and css.<br>I have some basic
+							understanding of ReactJs.<br> I have expierience using Github and Gitlab. </p>
+					</div>
 				</div>
-			</section>
-
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Ilgvars Elksnis</h1>
-							<p>Learning programming<br> Using template from html5up.net</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Projects</a></li>
-								<li><a href="#two" class="button scrolly">Contact info</a></li>
-							</ul>
-						</div>
-					</section>
-
-				<!-- One -->
-					<section id="one" class="wrapper style3 spotlights">
-						<section>
-							<a href="#" class="image"><img src="./static/images/pro1front.webp" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Password checker</h2>
-									<p>Password checker uses hash function to encrpyt and request data from <a href="https://haveibeenpwned.com/Passwords">this sites</a> API to safely check if the password you want to use have ever been breeched </p>
-									<ul class="actions">
-										<li><a href="project1.html" class="button">Learn more</a></li>
-										<li><a href="https://github.com/ilgvars-elksnis/password" class="button">GitHub</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="./static/images/pro2front.jpeg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Data analysis with jupyter notebook</h2>
-									<p>These are two projects where i am messing around with 2 datasets. First uses pandas while second uses scikit-learn</p>
-									<ul class="actions">
-										<li><a href="project2.html" class="button">Learn more</a></li>
-										<li><a href="https://github.com/ilgvars-elksnis/data" class="button">GitHub</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="./static/images/pro3front.webp" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Picture AI</h2>
-									<p>Here we test out and play around with machine learning using already made algorithms</p>
-									<ul class="actions">
-										<li><a href="project3.html" class="button">Learn more</a></li>
-										<li><a href="https://github.com/ilgvars-elksnis/machine" class="button">GitHub</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-
-				
-
-				<!-- Two -->
-					<section id="two" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Contact</h2>
-							<p>Contact info below<br> Emailing through site works too. Enter name, email and message then send the message</p>
-							<div class="split style1">
-								<section>
-									<form action="submit_form" method="POST">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a type="submit" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Email</h3>
-											<span>Lion150@inbox.lv</span>
-											<span>elksnisilgvars@gmail.com</span>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>(+371) 27860754</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="https://github.com/ilgvars-elksnis/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
-
+				<div class="card">
+					<div class="circle">
+						<h2>Personality</h2>
+					</div>
+					<div class="content">
+						<p>I am silent type, however i have no issues socializing, working and communicating in
+							teams.<br> I am dedicated and like learning new things. I am also quite adaptable and versitile</p>
+					</div>
+				</div>
+				<div class="card">
+					<div class="circle">
+						<h2>Hobbies</h2>
+					</div>
+					<div class="content">
+						<p>I enjoy reading, casual gaming and long walks</p>
+					</div>
+				</div>
 			</div>
+		</div>
+	</section>
 
-		
-		<!-- Scripts -->
-			<script src="./static/assets/js/jquery.min.js"></script>
-			<script src="./static/assets/js/jquery.scrollex.min.js"></script>
-			<script src="./static/assets/js/jquery.scrolly.min.js"></script>
-			<script src="./static/assets/js/browser.min.js"></script>
-			<script src="./static/assets/js/breakpoints.min.js"></script>
-			<script src="./static/assets/js/util.js"></script>
-			<script src="./static/assets/js/main.js"></script>
+	<section class="projects" id="projects">
+		<div class="heading">
+			<h2>Projects</h2>
+			<div class="container">
+				<div class="card">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<div class="content">
+						<h2>Password Checker</h2>
+						<p>Python built password checker that connects to API. Password is converted in hash, then split
+							in 2 parts, one part is used to communicate to API and get list of hashes. From the
+							retrieved list we use the second part of password locally to find a match and see if it's
+							ever been used in breech.</p>
+						<a href="https://github.com/ilgvars-elksnis/password" class="btn">Github</a>
+					</div>
+				</div>
+				<div class="card">
+					<span></span>
+					<span></span>
+					<span></span>
+					<span></span>
+					<div class="content">
+						<h2>ReactJS Login</h2>
+						<p>Small experiment with react hooks</p>
+						<a href="https://github.com/ilgvars-elksnis/ReactJsLogin" class="btn">Github</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-	</body>
+	<section class="contact" id="contact">
+		<div class="heading">
+			<h2>Contact me</h2>
+		</div>
+		<div class="content">
+			<div class="contactInfo">
+				<h3>Contact info</h3>
+				<div class="contactInfoBox">
+					<div class="box">
+						<div class="text">
+							<h3>Phone</h3>
+							<p>+371 27860754</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="text">
+							<h3>Email</h3>
+							<p>elksnisilgvars@gmail.com<br> Lion150@inbox.lv</p>
+						</div>
+					</div>
+					<div class="box">
+						<div class="text">
+							<h3>Github</h3>
+							<div class="icon">
+								<a href="https://github.com/ilgvars-elksnis/" class="fab fa-github fa-3x"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="formBox">
+				<form action="submitForm" method="POST">
+					<h3>Message me</h3>
+					<input type="text" name="name" placeholder="Full Name or Organization" required>
+					<input type="email" name="email" placeholder="Email">
+					<textarea placeholder="Your Message" name="message" required></textarea>
+					<input type="submit" value="Send">
+				</form>
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<script src="/static/assets/js/navbar.js"></script>
+	<script src="/static/assets/js/toggleMenu.js"></script>
+	<script src="/static/assets/js/square.js"></script>
+
+</body>
+
 </html>
